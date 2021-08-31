@@ -13,6 +13,9 @@ public class LinkedListMain {
 		myLinkedListNode.appendNodes(node1);
 		myLinkedListNode.appendNodes(node2);
 		myLinkedListNode.insert(node3);
+		Object deleteNode = myLinkedListNode.pop();
+		System.out.println("the deleted value is "+deleteNode);
+		
 		myLinkedListNode.printLinkedList();
 		
 		
