@@ -10,8 +10,9 @@ public class LinkedListMain {
 		LinkedList myLinkedListNode = new LinkedList();
 		myLinkedListNode.add(node1);
 		myLinkedListNode.add(node2);
-		myLinkedListNode.add(node3);
-		myLinkedListNode.search(node3);
+		myLinkedListNode.insert(node3);
+		MyNode<Integer> node4 = new MyNode<Integer>(40);
+		myLinkedListNode.insertAfter(node3,node4);
 		myLinkedListNode.printLinkedList();
 		
 		
