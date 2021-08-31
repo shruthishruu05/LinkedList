@@ -2,14 +2,14 @@ package com.bridgelabz.linkedlist;
 
 public class LinkedList {
 	
-	public MyNode head;
-	public MyNode tail;
+	public INode head;
+	public INode tail;
 	
 	public LinkedList() {
 		this.head = head;
 		this.tail = tail;
 	}
-	public void add(MyNode newNode)
+	public void add(INode newNode)
 	{
 		if(this.tail==null) {
 			this.tail = newNode;
@@ -19,12 +19,12 @@ public class LinkedList {
 		}
 		else
 		{
-			MyNode tempNode = this.head;
+			INode tempNode = this.head;
 			this.head = newNode;
 			this.head.setNext(tempNode);
 		}
 	}
-	public void appendNodes(MyNode newNode)
+	public void appendNodes(INode newNode)
 	{
 		if(this.head==null)
 		{
@@ -35,7 +35,7 @@ public class LinkedList {
 		}
 		else
 		{
-			MyNode tempNode =newNode;
+			INode tempNode =newNode;
 			tempNode.setNext(this.head);
 			this.head = newNode;
 		}
@@ -45,7 +45,7 @@ public class LinkedList {
 	{
 		System.out.println("My nodes: "+head );
 	}
-	public void insert(MyNode newNode)
+	public void insert(INode newNode)
 	{
 		this.head.setNext(newNode);
 		newNode.setNext(this.tail);
@@ -53,8 +53,20 @@ public class LinkedList {
 	}
 	public Object pop()
 	{
-		MyNode tempNode = this.head;
-		this.head = (MyNode) this.head.getNext();
+		INode tempNode = this.head;
+		this.head = (INode) this.head.getNext();
 		return  tempNode.getKey();	
+	}
+	public Object popLast()
+	{
+		INode temporaryNode = this.head;
+		while(!temporaryNode.getNext().equals(this.tail))
+		{
+			temporaryNode = temporaryNode.getNext();
+		}
+		this.tail = temporaryNode;
+		temporaryNode = temporaryNode.getNext();
+		this.tail.setNext(null);
+		return temporaryNode;
 	}
 }
