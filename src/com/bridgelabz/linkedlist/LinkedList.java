@@ -51,6 +51,11 @@ public class LinkedList {
 		newNode.setNext(this.tail);
 		
 	}
-	
-	
+	public Object pop()
+	{
+		
+		MyNode tempNode = this.head;
+		this.head = (MyNode) this.head.getNext();
+		return  tempNode.getKey();	
+	}
 }
