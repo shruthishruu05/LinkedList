@@ -69,4 +69,19 @@ public class LinkedList {
 		this.tail.setNext(null);
 		return temporaryNode;
 	}
+	public void search(INode node) {
+		INode tempNode = this.head;
+		int flag=0;
+		while(!(tempNode == null)) {
+			if(tempNode.getKey() == node.getKey())
+			{
+				System.out.println(node.getKey()+" Found");
+				flag=1;
+				break;
+			}
+			tempNode = tempNode.getNext();
+			}
+		if(flag==0)
+			System.out.println(node.getKey()+" Not Found");
+	}
 }
