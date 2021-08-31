@@ -91,7 +91,16 @@ public class LinkedList {
 			tempNode = tempNode.getNext();
 		}
 		tempNode.setNext(node);
-		node.setNext(this.tail);
-		
+		node.setNext(this.tail);	
+	}
+	public void deleteAt(INode node) {
+		INode previous=this.head;
+		INode current = this.head;
+		while(!current.equals(node)) {
+			previous = current;
+			current=current.getNext();
+		}
+		previous.setNext(current.getNext());
+		current.setNext(null);
 	}
 }
