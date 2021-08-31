@@ -84,4 +84,14 @@ public class LinkedList {
 		if(flag==0)
 			System.out.println(node.getKey()+" Not Found");
 	}
+	
+	public void insertAfter(INode nodeAfter,INode node) {
+		INode tempNode = this.head;
+		while(!tempNode.equals(nodeAfter)) {
+			tempNode = tempNode.getNext();
+		}
+		tempNode.setNext(node);
+		node.setNext(this.tail);
+		
+	}
 }
