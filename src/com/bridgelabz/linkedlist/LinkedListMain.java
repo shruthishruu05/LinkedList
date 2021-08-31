@@ -13,6 +13,10 @@ public class LinkedListMain {
 		myLinkedListNode.insert(node3);
 		MyNode<Integer> node4 = new MyNode<Integer>(40);
 		myLinkedListNode.insertAfter(node3,node4);
+		System.out.println("Linked List before Deletion");
+		myLinkedListNode.printLinkedList();
+		myLinkedListNode.deleteAt(node4);
+		System.out.println("Linked List after Deletion");
 		myLinkedListNode.printLinkedList();
 		
 		
