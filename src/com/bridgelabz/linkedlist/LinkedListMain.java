@@ -8,15 +8,10 @@ public class LinkedListMain {
 		MyNode<Integer> node2 = new MyNode<Integer>(56);
 		MyNode<Integer> node3 = new MyNode<Integer>(30);
 		LinkedList myLinkedListNode = new LinkedList();
-		myLinkedListNode.add(node1);
-		myLinkedListNode.add(node2);
-		myLinkedListNode.insert(node3);
-		MyNode<Integer> node4 = new MyNode<Integer>(40);
-		myLinkedListNode.insertAfter(node3,node4);
-		System.out.println("Linked List before Deletion");
-		myLinkedListNode.printLinkedList();
-		myLinkedListNode.deleteAt(node4);
-		System.out.println("Linked List after Deletion");
+		myLinkedListNode.ascendingEntry(node1);
+		myLinkedListNode.ascendingEntry(node2);
+		myLinkedListNode.ascendingEntry(node3);
+		
 		myLinkedListNode.printLinkedList();
 		
 		
