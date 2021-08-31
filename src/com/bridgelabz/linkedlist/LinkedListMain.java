@@ -13,7 +13,7 @@ public class LinkedListMain {
 		myLinkedList.add(thirdNode);
 		myLinkedList.printLinkedList();
 		
-		System.out.println("appending node to linked list");
+		System.out.println("appending nodes to linked list");
 		MyNode<Integer> node1 = new MyNode<Integer>(70);
 		MyNode<Integer> node2 = new MyNode<Integer>(30);
 		MyNode<Integer> node3 = new MyNode<Integer>(56);
