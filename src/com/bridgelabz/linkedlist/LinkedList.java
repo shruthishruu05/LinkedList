@@ -9,18 +9,35 @@ public class LinkedList {
 		this.head = head;
 		this.tail = tail;
 	}
-	public void add(MyNode newnode)
+	public void add(MyNode newNode)
 	{
 		if(this.tail==null) {
-			this.tail = newnode;
+			this.tail = newNode;
 		}
 		if(this.head==null) {
-			this.head = newnode;
+			this.head = newNode;
 		}
 		else
 		{
 			MyNode tempNode = this.head;
-			this.head = newnode;this.head.setNext(tempNode);
+			this.head = newNode;
+			this.head.setNext(tempNode);
+		}
+	}
+	public void appendNodes(MyNode newNode)
+	{
+		if(this.head==null)
+		{
+			this.head =newNode;
+		}
+		if(this.tail==null) {    
+			this.tail = newNode;
+		}
+		else
+		{
+			MyNode tempNode =newNode;
+			tempNode.setNext(this.head);
+			this.head = newNode;
 		}
 	}
 	
